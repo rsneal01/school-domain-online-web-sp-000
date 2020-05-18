@@ -10,13 +10,12 @@ class School
   end
   
   def add_student(name, grade)
-    @roster[grade] = []
-    new_grade_array = @roster[grade].length
-      if new_grade_array == 0
-        
-        @roster[grade] << name
-      else 
-        @roster[grade] << name
-      end
+    
+    if @roster[grade].length == 0
+      @roster[grade] = []
+      @roster[grade] << name
+    else 
+      @roster[grade] << name
+    end
   end
 end
